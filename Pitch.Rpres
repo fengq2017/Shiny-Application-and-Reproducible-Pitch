@@ -1,0 +1,54 @@
+Prediction of Diamond Price
+========================================================
+author: FQ
+date: 10/29/2017
+autosize: true
+transition: rotate
+transition-speed: slow
+
+Overview
+========================================================
+This presentation is to provide documentation on the application of how to predict diamond price. This application can be found  https://felixqian.shinyapps.io/course9Project/
+
+In this application, we are building linear regression model utilizing `diamonds` data set and also predicting the price of a diamond based on its various properties, which can be selected from the below:
+- Carat
+- Cut
+- Color
+- Clarity
+
+This application can help build plots and generate predicted price of a specific diamond.
+
+Data used
+========================================================
+
+The data utilized in this application is the `diamonds` data set, which can be found in the `ggplot2` package.
+
+```{r echo=FALSE}
+library(ggplot2)
+```
+
+```{r echo=FALSE}
+summary(diamonds)
+
+```
+
+Shiny files
+========================================================
+
+The application has been created by using Shiny package and its source code is mainly contained in 2 files:
+- `ui.R`
+- `server.R`
+
+Both files can be found here: https://github.com/fengq2017/Shiny-Application-and-Reproducible-Pitch
+
+Application 
+========================================================
+
+The application is drawing plot of diamonds in the `diamonds` data set distributed by their size (carat) and price ($). The regression line is also shown in the plot. 
+
+By selecting specific features of the diamond (carat, cut, clarity, color), we are able to select the subset of the whole data and re-run the regression accordingly. If no features are selected, the regression model is run by using all diamonds in the data set.
+
+Below the graph the predicted price is shown.
+
+
+
